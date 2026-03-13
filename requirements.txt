@@ -1,16 +1,18 @@
-# 后端框架
-fastapi==0.115.0
-uvicorn==0.30.6
+# 基础Web框架
+fastapi==0.110.0          # 降级到兼容Python 3.12的版本
+uvicorn==0.27.0           # 匹配fastapi版本
 python-multipart==0.0.12
 python-dotenv==1.0.1
-# RAG核⼼依赖
-chromadb==0.5.15
-fastembed==0.3.6
-langchain==0.3.0
-langchain-community==0.3.0
-langchain-text-splitters==0.3.0
-# ⼤模型API依赖
+
+# 向量数据库和嵌入模型
+chromadb==0.5.0           # 兼容Python 3.12的版本
+fastembed==0.7.4          # 可用的最新稳定版
+langchain==0.2.10         # 兼容chromadb的版本
+langchain-community==0.2.10
+langchain-text-splitters==0.2.2
+
+# 其他依赖
 requests==2.32.3
 cohere==5.11.0
-# 前端框架
-streamlit==1.38.0
+pillow==11.0.0            # 兼容fastembed和Streamlit的版本
+streamlit==1.36.0         # 降级到兼容性更好的版本
