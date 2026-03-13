@@ -1,18 +1,21 @@
-# 基础Web框架（保留原版本，无冲突）
-fastapi==0.110.0
-uvicorn==0.27.0
+# 后端框架
+fastapi==0.115.0
+uvicorn==0.30.6
+# 向量数据库
+chromadb==0.5.15
+# RAG相关工具链
+langchain==0.3.0
+langchain-community==0.3.0
+langchain-text-splitters==0.3.0
+langchain-huggingface==0.1.0  # 恢复原版本
+# 嵌入模型（升级到兼容版本）
+fastembed==0.3.1
+# 接口与文件处理
 python-multipart==0.0.12
 python-dotenv==1.0.1
-
-# 核心RAG依赖（调整版本解决numpy冲突）
-chromadb==0.5.5          # 升级小版本，兼容numpy 1.26+
-fastembed==0.5.1         # 降级fastembed，不再强制numpy≥2.3（适配Python3.14）
-langchain==0.2.16        # 升级langchain，支持numpy 1.26~1.29（避开numpy2.x）
-langchain-community==0.2.16
-langchain-text-splitters==0.2.4
-
-# 其他依赖（调整pillow版本解决streamlit冲突）
+# 前端框架
+streamlit==1.38.0
+# 网络请求
 requests==2.32.3
+# 重排序优化
 cohere==5.11.0
-pillow==10.4.0           # 降级到streamlit1.36.0支持的最高版本（<11）
-streamlit==1.36.0
