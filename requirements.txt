@@ -3,14 +3,18 @@ fastapi==0.115.0
 uvicorn==0.30.6
 python-multipart==0.0.12
 python-dotenv==1.0.1
-# RAG核⼼依赖
+
+# RAG核心依赖
 chromadb==0.5.15
-fastembed==0.3.6
+fastembed==0.7.4
 langchain==0.3.0
 langchain-community==0.3.0
 langchain-text-splitters==0.3.0
-# ⼤模型API依赖
+
+# 大模型API依赖
 requests==2.32.3
 cohere==5.11.0
+
 # 前端框架
+pillow==9.5.0
 streamlit==1.38.0
