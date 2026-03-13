@@ -1,0 +1,16 @@
+# 排除所有非必要文件，只保留代码和依赖配置
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+venv/
+*.venv
+.env
+.DS_Store
+*.log
+.vscode/
+.idea/
+backend/data/
+*.pdf
+*.md
+*.zip
+.git/
