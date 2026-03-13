@@ -104,9 +104,8 @@ if "code_context" not in st.session_state:
 
 # 代码上下文展示与编辑
 with st.expander("📎 代码上下文（可选，会和问题一起传给AI）", expanded=False):
-    st.session_state["code_context"] = st.text_area(
+    st.text_area(
         "相关代码上下文",
-        value=st.session_state["code_context"],
         height=150,
         key="qa_code_context"
     )
