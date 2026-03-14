@@ -9,9 +9,9 @@ st.set_page_config(
 )
 
 # 后端接口地址，本地开发用这个，部署后替换成线上地址
-#BACKEND_BASE_URL = "http://127.0.0.1:8000"
+BACKEND_BASE_URL = "http://127.0.0.1:7860"
 #替换后
-BACKEND_BASE_URL = "https://vdsvjsnv-code-rag-assistant.hf.space"
+# BACKEND_BASE_URL = "https://localhost:7860"
 
 # 页面标题
 st.title("💻 代码学习智能审查助手")

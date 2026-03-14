@@ -1,3 +1,8 @@
+import sys
+import os
+# 将项目根目录加入Python模块搜索路径
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
@@ -15,12 +20,13 @@ app = FastAPI(
     version="1.0.0"
 )
 
+# 配置CORS跨域中间件，解决前后端联调的跨域问题
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["*"],  # 允许所有来源，开发和部署都方便
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["*"],  # 允许所有HTTP方法
+    allow_headers=["*"],  # 允许所有请求头
 )
 
 class CodeAnalyzeRequest(BaseModel):
